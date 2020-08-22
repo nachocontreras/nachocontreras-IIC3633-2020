@@ -1,0 +1,8 @@
+- Resumen
+- Puntos para abrir discusión
+- Mejoras o controversias
+    - Evaluación inadecuada
+    - Parámetros importantes no considerados
+    - Potenciales mejoras a algoritmos
+    - Fuentes de datos que podían mejorar los resultados
+---
