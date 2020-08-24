@@ -1,7 +1,7 @@
 BPR: Bayesian personalized ranking from implicit feedback
 ===
 
-En este paper se implementa un nuevo algoritmo para recomendación en base a factorización matricial, que genera factores latentes, pero a partir de una nueva función objetivo llamada BPR-Opt que se basa en la utilización de probabilidades bayesianas. Además, a diferencia de los estudios semejantes y técnicas de recomendación user-item, se demuestra la utilización de un enfoque user-(item-item). Esto, en el marco del *feedback implícito* hace referencia a que los _r_<sub>ui</sub> conocidos como el factor de preferencia del usuario $u$ al item $i$, donde 1 es si es conocido y 0 si no se ha utilizado, se extiende a una representación en dos dimensiones donde para un usuario $u$, existe una comparación entre los items _i_ y _j_, tal como se ve en las siguientes figuras.
+En este paper se implementa un nuevo algoritmo para recomendación en base a factorización matricial, que genera factores latentes, pero a partir de una nueva función objetivo llamada BPR-Opt que se basa en la utilización de probabilidades bayesianas. Además, a diferencia de los estudios semejantes y técnicas de recomendación user-item, se demuestra la utilización de un enfoque user-(item-item). Esto, en el marco del *feedback implícito* hace referencia a que los _r_<sub>ui</sub> conocidos como el factor de preferencia del usuario _u_ al item _i_, donde 1 es si es conocido y 0 si no se ha utilizado, se extiende a una representación en dos dimensiones donde para un usuario _u_, existe una comparación entre los items _i_ y _j_, tal como se ve en las siguientes figuras.
 
 ---
 <img src="images/implicit-feedback.PNG"
