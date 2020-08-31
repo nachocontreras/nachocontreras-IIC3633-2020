@@ -1,14 +1,15 @@
-Ideas centrales para el mini resumen
-    - Propiedades para comparar sistemas recomendadores. Se basa en propiedades direcatamente extraíbles de la evaluación de un *recsys*.
-    - Entre las propiedades se encuentra la preferencia del usuario, la precisión, el *coverage* (basados en proporciones), el *cold start*, entre otros aspectos.
-    - Se revisa sistemas offline, user studies y evaluacón en tiempo real.
-Challenges
-    - Los sistemas offline dependen de cómo se supone que será la interacción de los usuarios en el futuro debido a que se puede crear un moodelo que se base en periodos, interacciones o relaciones entre los items. Esto es un desafío para la implementación de estos sistemas.
-Puntos interesantes
-    - Los usuarios no solo buscan que les gusta sino que items les podría gustar.
-    - Para poder medir la precisión o interfaz de un sistema recomendador se debe mantener constante la otra para evitar sesgos en la evaluación y medidas erróneas.
-    - Se utiliza el student T-test para comparar algunos parámetros, y no hipotesis H como se hubiese definido por default debido a que t-Test permite comparar resultados de distintas muestras mientras que hipótesis H busca ver si el test evaluado cumple con los requerimientos de confianza.
-Críticas
-    -
+# Evaluating Recommendation Systems
 
----
+Los sistemas recomendadores ahora son muy populares en el mundo comercial y se está aplicando su implementación a nuevas áreas. Así, cada modelo depende de factores y características que probablemente no se hayan usado antes. Por lo anterior, expertos buscan la forma de poder comparar entre la aplicación de distintos modelos para mejorar la recomendación para los usuarios de los sistemas. Así, en este *handbook* se plantean las propiedades para comparar sistemas recomendadores, basandose en propiedades directamente extraíbles de la evaluación de un *recsys*. Éstas se plantean alrededor de sistemas offline, user studies y evaluacón en tiempo real. Además, entre las propiedades se encuentra la preferencia del usuario, la precisión, el *coverage* (basados en proporciones), el *cold start*, entre otros aspectos.
+
+Durante la lectura pude notar algunos hechos interesantes. En primer lugar, el enfoque de recomendar productos o items a evolucionado a no solo recomendar cosas que le gustan al usuario, sino que a items que le podría gustar en el futuro. Lo encontré un punto favorable debido a que no siempre se relaciona el futuro comportamiento del usuario con lo que se va a predecir ya que se enfoca en las cosas que ha hecho y por ende le gustan.
+
+En segundo lugar, se habla de que para medir la precisión o interfaz de un sistema recomendador se debe mantener costante una de las variables para evitar sesgos en la evaluación o medidas erróneas. Este factor ataca directamente a la evaluación de múltiples parámetros a la vez, que puede afectar su real desempeño.
+
+En tercer lugar, y desde el punto de vista de la estadística, note que se utiliza el student T-test para comparar algunos parámetros, y no hipótesis H como se hubiese definido por default debido a que t-Test permite comparar resultados de distintas muestras mientras que hipótesis H busca ver si el test evaluado cumple con los requerimientos de confianza. Esto me abrió los ojos en términos de comparación de modelos ya que siempre consideré que había que basarse en una serie de parámetros y ver si el valor está o cumple las condiciones para poder ser aceptado.
+
+Algo que me llamó la atención y que no se abordó lo suficiente es el hecho de que los sistemas offline dependen de cómo se supone que será la interacción de los usuarios en el futuro. Esto ocurre ya que se puede crear un moodelo que se base en periodos, interacciones o relaciones entre los items. Sin embargo, la realización de estos sistemas de forma adecuada y correcta es un desafío para en su implementación y los parámetros de evaluación deben poder ser cuidadosamente elegidos para evitar la tendencia a items o factores ya vistos por el usuario, el pasado.
+
+En conclusión, no siempre se debe evaluar a un sistema recomendador por su desempeño o precisión, sino que dependiendo del tipo de evaluación, sistema o recomendación necesaria se buscan propiedades directamente extraíbles de la implementación para poder comparar entre distintos modelos y buscar la mejor recomendación.
+
+Ignacio Contreras
