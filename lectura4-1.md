@@ -1,17 +1,10 @@
-Ideas centrales para el mini resumen
-- Content-based recommendation systems analyze item descriptions to identify items that are of particular interest to the user
-- td-idf no captura el contexto
-Challenges
-- 
-Puntos interesantes
--   Many domains are best represented by semi-structured data in which there are some attributes with a set of restricted values and some free-text fields. A common approach to dealing with free text fields is to convert the free text to a structured representation. For example, each word may be viewed as an attribute, with a Boolean value indicating whether the word
-- Se pueden usar sets de palabras contiguas en vez de palabras solas.
-- Se comparan diversos algoritmos de content-based.
-    - Arboles de desicion   
-Críticas
-- 
-
----
 # Content-Based Recommendation Systems
 
 
+En este paper se analizan y porponen diversos algoritmos para realizar descripciones de los items para identificar a quellos que son de particular interés para los usuarios, es decir, recomendación por contenido. Además, se señala durante el desarrollo de la investigación que a la información semi-estructurada, como los textos, se les puede extraer ciertos atributos con un conjunto de restricciones para poder realizar recomendaciones sobre estos items. Así, se puede utilizar algoritmos que tornan la información semi-estructurada a estructurada, como el td-idf, para cada término utilizado.
+
+De esta manera se habla de algoritmos como los árboles de decisión, vecinos más cercanos (KNN), *relevance feedback*, clasificadores lineales y *Naive Bayes*, que es muy bueno para clasificadores de texto. Por ejemplo, una implementación para la recomendación por contenido, como un texto, que es sobre lo que más se habla, es utilizar booleanos para indicar si la palabra i aparece en el documento j. O también, la forma de utilizar palabras contiguas para el análisis en vez de palabras solas, como en td-idf, para evitar pérdida de contexto.
+
+Sin embargo, durante el *paper* se habla sobre cómo estas metodologías, que al no considerar si el contenido del item contiene suficiente información para distinguir entre los items que les gusta a un usuario y los que no, pueden generan recomendaciones que podrían ser equívocas. Así, pienso que se podría realizar una combinación de algoritmos de recomendación, como KNN, CNN, y ténicas de td-idf o *long-short term* para poder mejorar la predicción y poder recomendar sobre items similares pero de distinto tópico.
+
+En conclusión, no siempre se debe utilizar ratings para poder recomendar elementos a los usuarios, sino que a partir de las características de los items, su contenido, se puede asociar los gustos de los usuarios a ellos y poder recomendar en base a esto. Sin embargo, hay que tener cuidado de tener items muy similares que no puedan distinguirse por su contenido, como algunos textos o poesías. A estos se le puede realizar una combinación de algoritmos para encontrar buenas recomendaciones para los usuarios.
