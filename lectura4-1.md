@@ -8,3 +8,5 @@ De esta manera se habla de algoritmos como los árboles de decisión, vecinos m�
 Sin embargo, durante el *paper* se habla sobre cómo estas metodologías, que al no considerar si el contenido del item contiene suficiente información para distinguir entre los items que les gusta a un usuario y los que no, pueden generan recomendaciones que podrían ser equívocas. Así, pienso que se podría realizar una combinación de algoritmos de recomendación, como KNN, CNN, y ténicas de td-idf o *long-short term* para poder mejorar la predicción y poder recomendar sobre items similares pero de distinto tópico.
 
 En conclusión, no siempre se debe utilizar ratings para poder recomendar elementos a los usuarios, sino que a partir de las características de los items, su contenido, se puede asociar los gustos de los usuarios a ellos y poder recomendar en base a esto. Sin embargo, hay que tener cuidado de tener items muy similares que no puedan distinguirse por su contenido, como algunos textos o poesías. A estos se le puede realizar una combinación de algoritmos para encontrar buenas recomendaciones para los usuarios.
+
+Ignacio Contreras
