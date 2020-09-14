@@ -1,19 +1,3 @@
-Ideas centrales para el mini resumen
-- Se combinan diversos CF algoritmos para poder obtener uno mejor. Se llama ensembled method.
-- La mejor combinación dfue de componentes lineales.
-- 
-Challenges
-- 
-Puntos interesantes
-- Que fueran uno por uno aclarando las caracteristicas del modelo.
-- We note here that the individual algorithms in the ensemble were trained on the original training set, i.e. the whole dataset excluding the probe set. However, the training of the blending algorithm was done on the pTrain set, i.e., one half of the probe set.
-- Se revisan distintos metodos para encontrar combinaciones de modelos.
-- 
-Críticas
-- 
-
----
-
 # Combining Predictions for Accurate Recommender Systems
 
 Hoy en día, existe una gran diversidad de algoritmos para entregar recomendaciones a los usuarios en base a información implícita y explícita. Estos algoritmos funcionan bien dependiendo del contexto y la información que se les entrega. Por ejemplo, un collaborative filtering item-item tiene métricas adecuadas cuando existen interacciones entre los usuarios y los items, como ratings. Sin embargo, los resultados pueden ser mejorados cuando se combinan diversos algortimos, lo que se llama _ensembled model_.
