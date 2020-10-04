@@ -1,19 +1,14 @@
-Ideas centrales para el mini resumen
-- A veces la precisión de las recomendaciones no siempre se correlaciona con una mejor experiencia de usuario.
-- Se presenta SetFusion, una interfaz de usuario para un sistema recomendador híbrido que utiliza el diagrama de Venn.
-- La interfaz tiene un efecto positivo en la experiencia de usuario.
-- Se enfoca en la _user controllability_ para charlas de conferencia.
-- Tiene dos puntos de investigación. El componente visual y las conferencias.
-Challenges
-- 
-Puntos interesantes
-- Como también la fusión entre las distintas recomendaciones a partir de un _weighted_ de los modelos y su representación en Venn.
-Críticas
-- No se explica como un nuevo usuario comprende su vector de tokens y como se completa su composición antes, durante o después de las recomendaciones. Sin embargo se señala como obtener la cantidad de parámetros que lo representan.
-Propuestas
-- 
----
-
 # Visual User-Driven Approach for Hybrid Recommendation
 
+En los sistemas recomendadores se busca que los items entregados al usuario sean lo más exactos y relevantes posibles, que puedan predecir el comportamiento del usuario y ayudarlo a tomar una decisión (ej. en compras online). Sin embargo, a veces la precisión de las recomendaciones no se correlaciona con una mejor experiencia de usuario. Así, para poder revisar ese tema, se presenta SetFusion, una interfaz de usaurio para un sistema recomendador híbrido que utiliza el diagrama de Venn para que los usuario visualicen como sus reccomendaciones y parámetros fueron construidos mientras evalúan en vivo la calidad de sus recomendaciones.
 
+En este paper se trabaja sobre la idea de la experiencia del usuario y cómo su control e inspección sobre las interfaces de recomendación le permiten tener satisfacción con el sistema y a la vez recomendaciones relevantes y novedosas para el usuario. En particular, esta plataforma entrega recomendaciones sobre charlas de conferencia en un sistema híbrido que mezcla: los papers más guardados, más similares a los propios items, y autores frecuentemente citados. Se le entrega un peso a cada modelo en base a lo que el usuario elige que sea mediante _sliders_.
+
+La experimentación va enfocada en la _user controllability_ y por ende, se desarrolla el componente visual como también el modelo recomendador y su uso sobre las conferencias. Durante el paper se presentan los componentes de la interfaz como también su utilización por los usuarios, demostrando la transparencia y explicabilidad de las recomendaciones y el control que tiene el usuario sobre ellas.
+
+Además del desarrollo de la interfaz, se habla sobre la representación de los items como de los usuarios. Sin embargo, no se explica como un nuevo usuario comprende su vector de tokens y como se completa su composición antes, durante o después de las recomendaciones. Esto perjudica la replicabilidad de la experimentación ya que no existe un componente claro que forme el vector de usuario utilizado para CF. De todas formas, se señala como obtener la cantidad de parámetros que lo representan. Sobre los items existe mayor claridad ya que se entrega un paso a paso de cómo obtener la popularidad de los _papers_ de conferencia en base a sus referencias.
+
+En conclusión, los sistemas recomendadores además de buscar precisión en los items que entrega se enfocan en la usabilidad y la experiencia del usuario. Así, en este paper se presenta la plataforma SetFusion que permite mostrar y transparentar el proceso de recomendación para charlas de conferencia. El principal foco es la _user controllability_, por lo que el enfoque principal se basa en la interfaz y en segundo lugar, la calidad de las recomendaciones. Sin embargo, el vector de usuarios utilizado para realizar _Collaborative Filtering_ no se presenta de forma clara. Por otro lado, los modelos en relación a los items tienen un origen conocido.
+Como futura implementación, se podría utilizar representaciones de grafo que muestren las conexiones del usuario con los items y los demás participantes para conocer, además de los pesos utilizados por los modelos, la relación directa con los componentes del mismo.
+
+Ignacio Contreras
