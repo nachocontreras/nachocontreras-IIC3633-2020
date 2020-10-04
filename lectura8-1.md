@@ -10,5 +10,6 @@ Además del desarrollo de la interfaz, se habla sobre la representación de los 
 
 En conclusión, los sistemas recomendadores además de buscar precisión en los items que entrega se enfocan en la usabilidad y la experiencia del usuario. Así, en este paper se presenta la plataforma SetFusion que permite mostrar y transparentar el proceso de recomendación para charlas de conferencia. El principal foco es la _user controllability_, por lo que el enfoque principal se basa en la interfaz y en segundo lugar, la calidad de las recomendaciones. Sin embargo, el vector de usuarios utilizado para realizar _Collaborative Filtering_ no se presenta de forma clara. Por otro lado, los modelos en relación a los items tienen un origen conocido.
 Como futura implementación, se podría utilizar representaciones de grafo que muestren las conexiones del usuario con los items y los demás participantes para conocer, además de los pesos utilizados por los modelos, la relación directa con los componentes del mismo.
+De esta manera, se extrapola a áreas con utilización de grafos y permite la exxplicación de las recomendaciones en áreas más diversas y no solo en conferencias, por ejemplo, la selección de materiales de construcción en base a atributos seleccionados.
 
 Ignacio Contreras
