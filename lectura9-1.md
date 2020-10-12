@@ -1,21 +1,13 @@
-Ideas centrales para el mini resumen
-- However, selecting the most relevant items (albums, artists, playlists...) to display in these carousels is a challenging task, as items are numerous and as users have different preferences.
-- In this paper, we model carousel personalization as a contextual multi-armed bandit problem with multiple plays, cascade-based updates and delayed batch feedback
-- our proposed framework,
-- Throughout this paper, the K arms will correspond to a list of K cards/items, such as a catalog of albums or playlists in a music streaming app.
-- Cada vez que se revisa o clickea una tarjeta dentro de las L que se pueden ver se le asigna un valor 1 con una probabilidad p. Esto hace referencia a las tarjetas que el usuario tiene interés. El usuario no puede ver todas las tarjetas y tampoco se sabe exactamente cuales se ven. Entonces se puede considerar que las tarjetas presentadas no son de interés del usuario pero si pide más significa que vió hasta el máximo de tarjetas entregadas.
-- Se realizó un experimento offline luego un online A/B test para validar los resultados del experimento offline.
-- El offline, SVD KNN.
-- superiority of the proposed multi-armed bandit framework for personalization
-Challenges
-- 
-Puntos interesantes
-- user feedback to adaptively improve the recommended content via online learning strategies.
-- Semi-Personalization via User Clustering: app, users from a same group would have homogeneous musical tastes. Aunque sea más rápido depende de la calidad del los clusters.
-- Contextual Multi-Armed Bandits: Semejante al SVD con factores latentes. vectors aim at summarizing user preferences on the platform, e.g. their musical tastes
-- algoritmo ts-seg-pessimistic. method manages to effectively exploit information and to quickly rank playlists,
-Críticas
-- 
----
-
 # Carousel Personalization in Music Streaming Apps with Contextual Bandits
+
+Los sistemas recomendadores basan su efectividad en métricas tales como la precisión, recall, _serendepity_, novedad, entre otras. Sin embargo, hay ocasiones en que estas métricas dependen de la experiencia del usuario y de sus elecciones. Una situación como esta es el caso de los carruseles, espacio desafiante ya que existen muchos usuarios con numerosos items y variadas preferencias.
+
+En este paper, se evalúa la implementación de un carrusel basado en múltiples sistemas recomendadores para entregar a los usuarios álbumes, artistas y _playlists_. Este carrusel presenta K espacios para mostrar elementos, sin embargo solo L son vistos por el usuario en primer lugar. Cada vez que se revisa o clickea una tarjeta dentro de las L que se pueden ver se le asigna un valor 1 con una probabilidad _-p. Esto hace referencia a las tarjetas que el usuario tiene interés. El usuario no puede ver todas las tarjetas y tampoco se sabe exactamente cuales se ven. Entonces se puede considerar que las tarjetas presentadas no son de interés del usuario pero si pide más significa que vió hasta el máximo de tarjetas entregadas.
+
+Los sistemas con múltiples brazos o sistemas recomendadores basan su efectividad en el _feedback_ del usuario que de forma adaptativa mejora las recomendaciones entregadas en un experimento _online_, es decir, en vivo. Sin embargo, se realizan entrenamientos iniciales para poder configurar el perfil del usuario. Entre los métodos utilizados se encuentra la semi-personalización con KNN o clústers de usuarios. En este caso, usuarios del mismo grupo tienen gustos musicales similares. Este método es rápido pero depende de la calidad de los clústers. También se encuentra el "Contextual Multi-Armed Bandits", semejante a SVD con factores latentes. Acá los vectores generados buscan resumir las preferencias del usuario en la plataforma. Para poder realizar esta experimentación se utilizó el algoritmo _ts-seg-pessimistic_, que maneja de forma eficiente la información explosiva de los sistemas recomendadores y los rankea de acuerdo a las preferencias del usuario y a resultados o usos anteriores.
+
+Este tipo de modelos representan una diferencia en comparación con los modelos embebidos comúnes. En particular, ahora no se mezclan o ponderar los resultados de los distintos modelos sino que se efectú un ranking de ellos a partir de probabilidades de éxito, clicks, visualizaciones, entre otros factores. Para poder evaluar esto realizó un experimento _offline_ y luego un experimento _online_, basado en A/B test, para validar los resultados del experimento _offline_. El experimento _offline_ estaba conformado por KNN de usuarios y SVD para obtener sus vectores de perfil.
+
+En conclusión, los modelos basados en múltiples sistemas recomendadores pueden utilizarse bajo el concepto de carruseles con múltiples brazos donde las recomendaciones se priorizan y ordenan en base a un comportamiento adaptativo del usuario y por ende, afectando en tiempo real la probabilidad de recomendación por un sistema recomendador. Este tipo de experimentos se podría desarrollar en áreas donde el usuario tenga una gran variedad de elementos o tipos de items por escoger, como lo es el caso de un supermercado o centro comercial. De esta manera, este enfoque podría permitir que los usuarios obtengan recomendaciones diferentes y novedosas, variadas en tipo y útiles para el usuario según sus propios gustos y los de los demás.
+
+Ignacio Contreras
