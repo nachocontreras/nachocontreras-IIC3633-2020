@@ -1,40 +1,15 @@
-Ideas centrales para el mini resumen
-- This article aims to provide a comprehensive review of recent research eorts on deep learning based recommender systems. More concretely, we provide and devise a taxonomy of deep learning based recommendation models, along with providing a comprehensive
-summary of the state-of-the-art.
-- However, there is a lack of extensive review on deep learning based recommender system. The goal of this survey is to thoroughly review literature on the advances of deep learning based recommender system
-
-- RNNs are extremely suitable for sequential data processing. As such, it becomes a natural choice for dealing with the temporal dynamics of interactions and sequential paerns of user behaviours, as well as side information with sequential signals, such as texts, audio, etc. Como GRU4REC . indicated that simple neighbourhood approach could achieve same accuracy results as GRU4Rec.
-
-- Restricted Boltzmann Machine based Recommendation
-
-- Neural Attention based Recommendation: illtering out the uninformative features from raw inputs and reduce the side eects of noisy data.
-
-- Neural AutoRegressive based Recommendation: tractable distribution estimator which provides a desirable alternative to RBM. Ideally, the order of movies should follow the time-stamps of ratings.
-
-- Deep Reinforcement Learning for Recommendation
-Most recommendation models consider the recommendation process as a static process, which makes it dicult to capture user’s temporal intentions and to respond in a timely manner.(1) dynamic changes of news content and user preference; (2) incorporating return paerns (to the service) of users; (3) increase diversity of recommendations.
-
-- Adversarial Network based Recommendation: process between documents and queries, and retrieval tasks can be achieved by generating relevant document d given a query q. Se hace un mix max entre documentos relevantes y no relevantes.
-
-- Deep Hybrid Models: Mezcla
-
-Trabajo futuro:
-- Explainable Recommendatio. e rst, is to make explainable predictions to users, allowing them to understand the factors behind the network’s recommendationsn
-- Hay mas
-
-conclusion:
-this article, we provided an extensive review of the most notable works to date on deep learning based
-recommender systems. We proposed a classication scheme for organizing and clustering existing publications,
-and highlighted a bunch of inuential research prototypes. We also discussed the advantages/disadvantages of
-using deep learning techniques for recommendation tasks
-
-Critica:
- veo que siempre se busca "Making accurate recommendations requires deep understanding of item characteristics and user’s actual demands
-and preferences".
-
-Puntos interesantes
-- In recent years, deep learning has garnered considerable interest in many research elds such as computer vision and natural language processing, owing not only to stellar performance but also the aractive property of learning feature representations from scratch.
-- Deep learning is able to eectively capture the non-linear and non-trivial user-item relationships, and enable the codification of more complex abstractions as data representations in the higher layers
-
---- 
 # Deep Learning based Recommender System: A Survey and New Perspectives
+
+En los últimos años se ha desarrollado un enorme interés en campos como la visión por computador y el procesamiento del lenguaje natural, esto debido a que el _deep learning_, componente fundamental de estos campos, tiene el atractivo potencial de capturar las representaciones y características de modelos desde cero.
+
+Este paper tiene como objetivo proveer un análisis detallado de la investigación reciente entorno a los sistemas recomendadores basados en deep learnig. Así se presentan durante el desarrollo del artículo características de estos sistemas y herramientas como algortimos en el estado del arte. Esta segunda parte se enfoca en modelos de aprendizaje profundo, tales como RNN, Neural Attention y aprendizaje reforzado.
+
+Entre los modelos presentados podemos apreciar los siguientes. RNN, útiles para _data_ secuencial sirve para encontrar patrones en las interacciones dinámicas y temporales de los usuarios. _Restricted Boltzmann Machine_ que basa su aprendizaje en modelos probabilísticos y que guarda relación con capas internas de perceptrones conectadas a toda las capas principales. También se encuentra _Neural Attention_ cuyo objetivo recae en encontrar la información más relevante dentro de un espacio de información. Éste se puede complementar con otros en modelos híbridos para mejorar el _input_ de información. Además, se encuentra el modelo de aprendizaje reforzado, basado en recompensas e interacciones temporales.
+
+También, durante el paper se señalan diversos ejemplos sobre el uso de estos sistemas en la vida diara. Por ejemplo, se presenta un modelo de _Reinforcement learning_ aplicado en tiendas en línea (Munemasa, 2018). En este caso, el modelo contiene _feedback_ tanto positivo como negativo e interacciones secuenciales de los usuarios con la tienda y sus productos.
+
+Sin embargo, en el paper se desarrolla la idea de mejorar la precisión de las recomendaciones a travpes de un profundo entendimiento de las caractrerísticas de los ítems y de los usuarios. El problema de esto es que los sistemas recomendadores se basan también en la novedad y diversidad de los items que entrega, no solo que le gusten al usuario (Most Popular) sino que le permitan ampliar su visión de los items del sistema. Métricas como _serendepity_, _novelty_ y la explicabilidad de los sistemas representa un desafío en los nuevos sistemas. El enfoque hacia el usuario y la usabilidad están tomando gran importancia.
+
+En conclusión, este paper presenta distintos tipos de aprendizaje profundo gracias al estudio de la literatura del estado del arte y sus aplicaciones. Entre algunos de ellos se encuentran las redes neuronales recurrentes, con la capacidad de analizar secuencias de información, como también los modelos de aprendizaje reforzado, que capturan las intenciones temporales del usuario para realizar recomendaciones dinámicas.
+
+Estos modelos y en particular el aprendizaje profundo permiten abordar áreas de investigación que con los datos podrían obtener información relevante e intrínseca del sistema. Esto permite realizar predicciones y recomendaciones útiles y precisas para el usuario. Sin embargo, se están desarrollando nuevas técnicas para mejorar la novedad y diversidad de las recomendaciones como su explicabilidad.
